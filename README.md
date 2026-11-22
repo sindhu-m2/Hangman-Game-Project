@@ -82,6 +82,6 @@ The objective of this project is to demonstrate Python programming concepts, Fla
 
 ## 👩‍💻 Developed By
 
-**Boddu Sudarshana**
+**Boddu Sudarshana Laxmi Sindhu**
 
 Python Programming Intern – CodeAlpha
