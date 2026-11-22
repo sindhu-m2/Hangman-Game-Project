@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🎮 Hangman Game</h1>
+        <p class="subtitle">Guess the word and save the Hangman!</p>
+
+        <div class="game-card">
+
+            <div class="hint-box">
+                <h3>💡 Your Hint</h3>
+                <p id="hint">Your clue will appear here</p>
+            </div>
+
+            <div class="word-display" id="word-display">
+                _ _ _ _ _
+            </div>
+
+            <p id="attempts">Remaining Attempts: 6</p>
+            <div class="score-box">
+    🏆 Round Score: <span id="score">60 / 60</span>
+</div>
+
+           
+<div id="hangman-drawing">
+    <svg viewBox="0 0 220 250" class="hangman-svg">
+        <!-- Stand -->
+        <line x1="20" y1="230" x2="180" y2="230" class="stand"/>
+        <line x1="60" y1="230" x2="60" y2="20" class="stand"/>
+        <line x1="60" y1="20" x2="150" y2="20" class="stand"/>
+        <line x1="150" y1="20" x2="150" y2="50" class="stand"/>
+
+        <!-- Person: appears after wrong guesses -->
+        <circle id="head" class="hangman-part" cx="150" cy="70" r="20"/>
+        <line id="body" class="hangman-part" x1="150" y1="90" x2="150" y2="155"/>
+        <line id="left-arm" class="hangman-part" x1="150" y1="110" x2="115" y2="135"/>
+        <line id="right-arm" class="hangman-part" x1="150" y1="110" x2="185" y2="135"/>
+        <line id="left-leg" class="hangman-part" x1="150" y1="155" x2="120" y2="195"/>
+        <line id="right-leg" class="hangman-part" x1="150" y1="155" x2="180" y2="195"/>
+    </svg>
+</div>
+
+
+            <div class="keyboard" id="keyboard">
+                <!-- Alphabet buttons will appear here -->
+            </div>
+
+            <p id="message">Choose a letter to begin!</p>
+
+            <button id="restart-btn">🔄 New Game</button>
+
+        </div>
+
+        <footer>
+            Made with ❤️ using Python
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
